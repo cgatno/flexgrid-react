@@ -6531,8 +6531,9 @@ widest-line@^1.0.0:
   dependencies:
     string-width "^1.0.1"
 
-"wijmo@file:../Downloads/Wijmo-Enterprise.20172.359/C1Wijmo-Enterprise_5.20172.359/NpmImages/wijmo-commonjs-min":
-  version "5.20172.359"
+wijmo@wijmo:
+  version "5.20181.449-rc"
+  resolved "https://registry.yarnpkg.com/wijmo/-/wijmo-5.20181.449-rc.tgz#04fc269c0896b4341262e442a5fe6fda78c6a50c"
 
 window-size@0.1.0:
   version "0.1.0"

@@ -1,33 +1,32 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import { FlexGrid } from 'wijmo/wijmo.react.grid';
+import { FlexGrid } from "wijmo/wijmo.react.grid";
 
-import './wijmo.min.css';
-import './App.css';
+import "./App.css";
 
 class App extends Component {
   state = {
     users: [
       {
         id: 0,
-        name: 'Christian',
-        job: 'React Dev',
+        name: "Christian",
+        job: "React Dev"
       },
       {
         id: 1,
-        name: 'Connor',
-        job: 'Front-End Web Dev',
+        name: "Connor",
+        job: "Front-End Web Dev"
       },
       {
         id: 2,
-        name: 'Sarah',
-        job: 'Chemist',
-      },
+        name: "Sarah",
+        job: "Chemist"
+      }
     ],
-    nameInput: '',
-    jobInput: '',
+    nameInput: "",
+    jobInput: "",
     cellEdit: false,
-    editingCell: '',
+    editingCell: ""
   };
 
   addUser() {
@@ -43,31 +42,31 @@ class App extends Component {
           id: this.state.users.length,
           // Use the input values saved in state
           name: this.state.nameInput,
-          job: this.state.jobInput,
-        },
+          job: this.state.jobInput
+        }
       ],
       // Reset the inputs to blank in the process
-      nameInput: '',
-      jobInput: '',
+      nameInput: "",
+      jobInput: ""
     });
   }
 
   updateInputValue(name, evt) {
     this.setState({
-      [name]: evt.target.value,
+      [name]: evt.target.value
     });
   }
 
   beginEdit(args) {
     this.setState({
       cellEdit: true,
-      editingCell: `${args.col}, ${args.row}`,
+      editingCell: `${args.col}, ${args.row}`
     });
   }
 
   finishEdit() {
     this.setState({
-      cellEdit: false,
+      cellEdit: false
     });
   }
 
@@ -93,7 +92,7 @@ class App extends Component {
             type="text"
             id="userName"
             value={this.state.nameInput}
-            onChange={evt => this.updateInputValue('nameInput', evt)}
+            onChange={evt => this.updateInputValue("nameInput", evt)}
           />
         </div>
         <br />
@@ -103,15 +102,19 @@ class App extends Component {
             type="text"
             id="userJob"
             value={this.state.jobInput}
-            onChange={evt => this.updateInputValue('jobInput', evt)}
+            onChange={evt => this.updateInputValue("jobInput", evt)}
           />
         </div>
         <br />
         <input type="button" value="Add User" onClick={() => this.addUser()} />
         <br />
-        <h2 style={{ display: this.state.cellEdit ? 'block' : 'none' }}>
+        <h2 style={{ display: this.state.cellEdit ? "block" : "none" }}>
           Currently editing cell at {this.state.editingCell}
         </h2>
+        <br />
+        <a href="https://www.grapecity.com/en/blogs/wijmo-flexgrid-best-react-data-grid">
+          Check out the full tutorial blog post for more information.
+        </a>
       </div>
     );
   }
