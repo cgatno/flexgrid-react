@@ -2,7 +2,6 @@
   "name": "flexgrid-react",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://flexgrid-react.glitch.me",
   "dependencies": {
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
